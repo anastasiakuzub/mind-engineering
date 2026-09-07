@@ -84,6 +84,20 @@
         .btn:hover {
             opacity: 0.9;
         }
+        .wrapper {
+  display: flex; /* Размещает меню и контент бок о бок */
+}
+.sidebar {
+  width: 250px; /* Ширина бокового меню */
+  background: #f4f4f4; /* Минималистичный серый фон */
+  padding: 20px;
+  height: 100vh; /* Меню на всю высоту экрана */
+}
+.content {
+  flex: 1; /* Контент занимает все оставшееся пространство */
+  padding: 40px;
+}
+
     </style>
 </head>
 <body>
@@ -95,14 +109,25 @@
         <div class="manifesto">
             "When the wave of panic reaches its peak, the disciplined mind does not fight. It observes. And the storm falls as a peaceful waterfall."
         </div>
-        <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
- padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
- border-radius: 8px; will-change: transform;">
-  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-    src="https://www.canva.com/design/DAHUcwaCDN4/QWRmKqXRdhgxJpWFH9pMVw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-  </iframe>
+      <div class="wrapper">
+  <!-- Боковое меню -->
+  <aside class="sidebar">
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="english.html">Английский</a></li>
+        <li><a href="french.html">Французский</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Основной контент страницы -->
+  <main class="content">
+    <h1>Моя стратегия и статьи</h1>
+    <p>Здесь будет твой текст...</p>
+  </main>
 </div>
-<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHUcwaCDN4&#x2F;QWRmKqXRdhgxJpWFH9pMVw&#x2F;view?utm_content=DAHUcwaCDN4&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Дизайн</a>
+
 
         <!-- BIO SECTION -->
         <div class="bio-text">
