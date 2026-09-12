@@ -28,13 +28,22 @@
             margin: 0 auto;
         }
 
-        /* Стиль главного заголовка */
+        /* Стиль главного заголовка сайта */
         h1 {
             font-size: 2.8rem;
             font-weight: 600;
             letter-spacing: -1px;
             color: #000000;
-            margin-bottom: 40px;
+            margin-bottom: 50px;
+        }
+
+        /* Стиль заголовка статьи */
+        h2 {
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 20px;
+            letter-spacing: -0.5px;
         }
 
         /* Тонкая эстетичная разделительная линия */
@@ -95,6 +104,13 @@
         .substack-button:hover {
             background-color: #333333;
         }
+
+        /* Адаптивность для мобильных устройств */
+        @media (max-width: 768px) {
+            body { padding: 40px 20px; }
+            h1 { font-size: 2.2rem; }
+            h2 { font-size: 1.4rem; }
+        }
     </style>
 </head>
 <body>
@@ -104,14 +120,10 @@
         <!-- Главный заголовок сайта -->
         <h1>Mind Engineering</h1>
         
-        <style type="text/css">
-         @media (max-width: 768px) {
-            body { padding: 40px 20px; }
-            h1 { font-size: 2.2rem; }
-         }
-        </style>
+        <!-- Заголовок твоей первой статьи -->
+        <h2>The Corridor</h2>
 
-        <!-- Твоя первая статья -->
+        <!-- Твой авторский текст -->
         <div class="article-text">
             I was surrounded by chaos and pain. So I took a massive sledgehammer and struck the very fabric of space with all my rage felling the vibration resonance through my palms. The space fractured and a rift appeared. The boundaries of the crack began to expand forcing open a corridor. I split into microscopic particles and in a slow stream they drifted toward the corridor.
         </div>
@@ -133,3 +145,4 @@
 
 </body>
 </html>
+
