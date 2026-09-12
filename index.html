@@ -62,38 +62,22 @@
             text-align: justify;
         }
 
-        /* Ссылки на другие страницы и ресурсы */
-        .links-section {
-            margin-top: 50px;
+        /* Зона кнопок и ресурсов */
+        .action-sections {
+            margin-top: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px; /* Отступ между кнопками */
         }
 
-        .nav-link {
+        /* Универсальный стиль премиальных кнопок */
+        .primary-button {
             display: inline-block;
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: #000000;
-            text-decoration: none;
-            border-bottom: 2px solid #000000;
-            padding-bottom: 2px;
-            transition: opacity 0.3s ease;
-            margin-bottom: 30px;
-        }
-
-        .nav-link:hover {
-            opacity: 0.6;
-        }
-
-        /* Кнопка-ссылка на Substack в самом конце */
-        .substack-section {
-            margin-top: 20px;
-        }
-
-        .substack-button {
-            display: inline-block;
+            align-self: flex-start; /* Чтобы кнопка не растягивалась на весь экран */
             background-color: #000000;
             color: #ffffff;
             text-decoration: none;
-            padding: 12px 24px;
+            padding: 14px 28px;
             font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: 0.5px;
@@ -101,7 +85,7 @@
             transition: background-color 0.3s ease;
         }
 
-        .substack-button:hover {
+        .primary-button:hover {
             background-color: #333333;
         }
 
@@ -110,6 +94,7 @@
             body { padding: 40px 20px; }
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.4rem; }
+            .primary-button { width: 100%; text-align: center; } /* На телефонах кнопки будут на всю ширину */
         }
     </style>
 </head>
@@ -130,19 +115,18 @@
 
         <hr>
 
-        <!-- Блок ссылок -->
-        <div class="links-section">
-            <!-- Ссылка на твою будущую вторую статью -->
-            <a href="israel-conflict.html" class="nav-link">The Arab-Israeli Conflict: A Systematic Geopolitical Analysis</a>
-        </div>
-        
-        <!-- Финальная кнопка на Substack -->
-        <div class="substack-section">
-            <a href="https://substack.com" target="_blank" class="substack-button">Subscribe on Substack</a>
+        <!-- Блок с кнопками-ссылками -->
+        <div class="action-sections">
+            
+            <!-- Кнопка перехода на твой будущий глубокий геополитический анализ -->
+            <a href="israel-conflict.html" class="primary-button">The Arab-Israeli Conflict: A Systematic Geopolitical Analysis</a>
+            
+            <!-- Кнопка подписки на Substack -->
+            <a href="https://github.io" target="_blank" class="primary-button">Subscribe on Substack</a>
+            
         </div>
 
     </div>
 
 </body>
 </html>
-
