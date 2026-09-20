@@ -62,6 +62,65 @@
             text-align: justify;
         }
 
+        /* Элитный минималистичный блок-ссылка для второй статьи */
+        .article-portal-card {
+            display: block;
+            text-decoration: none;
+            color: #1d1d1f;
+            background-color: #ffffff;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-top: 50px;
+            border: 1px solid #e3e8ec;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        /* Интерактивный отклик при наведении: легкое, дорогое ощущение объема */
+        .article-portal-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.03);
+        }
+
+        /* Контейнер для фотографии внутри ссылки */
+        .card-image-wrapper {
+            width: 100%;
+            height: 280px; /* Фиксированная эстетичная высота для изображения */
+            background-color: #d1d5db; /* Нейтральная серая заглушка, пока нет фото */
+            overflow: hidden;
+        }
+
+        .card-image-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Фотография идеально заполнит блок без искажений */
+            filter: grayscale(100%); /* Перевод фото в благородный ч/б стиль для нейтральности */
+            transition: filter 0.3s ease;
+        }
+
+        /* При наведении фотография может слегка возвращать цвет или оставаться ч/б */
+        .article-portal-card:hover .card-image-wrapper img {
+            filter: grayscale(0%);
+        }
+
+        /* Текстовое наполнение внутри блока-ссылки */
+        .card-body {
+            padding: 30px;
+        }
+
+        .card-body h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.3px;
+        }
+
+        .card-body p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: #515154;
+            text-align: justify;
+        }
+
         /* Зона кнопок и ресурсов */
         .action-sections {
             margin-top: 40px;
@@ -86,7 +145,7 @@
         }
 
         .primary-button:hover {
-            background-color: #1d1d1f;
+            background-color: #323236;
         }
 
         /* Адаптивность для мобильных устройств */
@@ -94,6 +153,7 @@
             body { padding: 40px 20px; }
             h1 { font-size: 2.2rem; }
             h2 { font-size: 1.4rem; }
+            .card-image-wrapper { height: 200px; }
             .primary-button { width: 100%; text-align: center; } /* На телефонах кнопки будут на всю ширину */
         }
     </style>
@@ -112,6 +172,18 @@
         <div class="article-text">
             I was surrounded by chaos and pain. So, I took a massive sledgehammer and struck the fabric of space with all my rage, felling the vibration resonate through my palms. The space fractured, and a rift appeared. The boundaries of the crack began to expand, forcing open a corridor. I split into microscopic particles, and in a slow stream, they drifted toward the corridor.
         </div>
+
+        <!-- Интерактивный монолитный блок-ссылка на твою вторую статью -->
+        <a href="creators-vs-performers.html" class="article-portal-card">
+            <div class="card-image-wrapper">
+                <!-- Замени 'architecture.jpg' на реальное название файла твоей фотографии, когда загрузишь её в репозиторий -->
+                <img src="architecture.jpg" alt="The Anomaly of the Creator">
+            </div>
+            <div class="card-body">
+                <h3>The Anomaly of the Creator</h3>
+                <p>An analytical deconstruction of the institutional framework that mistakes sovereign intent for escapism and confines architectural vision into a matrix of performers.</p>
+            </div>
+        </a>
 
         <hr>
 
